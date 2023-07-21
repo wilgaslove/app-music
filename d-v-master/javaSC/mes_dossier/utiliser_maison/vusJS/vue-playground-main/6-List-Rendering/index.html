@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>list_renddering</title>
+  <style>
+    div ul {
+      list-style: none;
+    }
+
+    #app {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="app">
+    <form @submit.prevent="addTodo">
+      <input v-model="newTodo">
+      <button>Add Todo</button>
+    </form>
+    <ul>
+      <li v-for="(todo, index) in todos" :key="(todo.id)">
+        {{ todo.text }}
+        <button @click="removeTodo(todo, index)">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div id="app">
+   <table>
+    <caption>Liste des élèves</caption>
+    <thead>
+      <th>Noms</th>
+      <th>Prénoms</th>
+    </thead>
+    <tbody>
+      <tr v-for="student in students" :key="student.id">
+        <td>{{student.fname}} </td>
+        <td>{{student.lname}} </td>
+      </tr>
+    </tbody>
+   </table>
+
+   <h2>Liste de langages informatques</h2>
+   <ul>
+    <li v-for="(lang  /*variable*/, index) in language" :key="index"> {{index}}-{{lang}} </li>
+   </ul>
+  </div> -->
+
+
+  <script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js'
+
+    // give each todo a unique id
+    let id = 0
+
+    createApp({
+      data() {
+        /* return{
+           students:[
+             {id:1, fname: "KOCTHO", lname: "Délano"},
+             {id:2, fname: "ABOU" , lname: "Martin" },
+             {id:3, fname: "VIGAN" , lname: "Nicole" },
+             {id:4, fname: "AGBANONDE" , lname: "Warris" },
+             {id:4, fname: "ADJOVI" , lname: "Wilgas" },
+           ],
+ 
+           language:[
+             "HTML",
+             "CSS",
+             "Javascript",
+             "PHP"
+           ]
+         }*/
+
+        return {
+          newTodo: '',
+          todos: [
+            { id: id++, text: 'Learn HTML' },
+            { id: id++, text: 'Learn JavaScript' },
+            { id: id++, text: 'Learn Vue' }
+          ]
+        }
+      },
+      methods: {
+        addTodo() {
+          // ...
+          this.todos.push({ id: id++, text: this.newTodo });
+          this.newTodo = ''
+        },
+        removeTodo(todo) {
+          // ...
+          this.todos.splice(todo, 1)
+        }
+      }
+    }).mount('#app')
+  </script>
+</body>
+
+</html>

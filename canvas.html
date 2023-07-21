@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas{
+            border: 9px solid blue;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="350" ></canvas>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const canvas = document.getElementById("canvas"); //récupération de l'ID de l'élément Canvas
+            let dessin2D = canvas.getContext('2d'); //context du travail dans le monde 2D du canvas.
+            
+             dessin2D.strokeStyle = "black"       //      definie la couleur du bordure.                 
+             dessin2D.strokeRect(50, 50, 200, 200); //DESSIN D'UN RECTANGLE OU UN CARRE
+             //dessin2D.strokeRect(px = 150, py = 150, width = 200, height 150); les bordures du rectangle ou triangle
+            
+            dessin2D.fillStyle = "#ff0000"; //definie la couleur du fond
+           dessin2D.fillRect(90,90,100,100); // definnie le plein
+
+
+           dessin2D.font = 'bold  18px Verdana';// definit le font 
+           dessin2D.fillStyle = 'blue';//style de couleur
+           dessin2D.fillText("HELLO ", 70 /*pX*/, 240/*pY*/);
+           dessin2D.fillStyle = 'black';// definition de la couleur du deuxième mot ou texte à écrire.
+           dessin2D.fillText("WORLD", /*pX*/70+dessin2D.measureText('HELLO').width+10, 240/*pY*/);
+           //ctx.fillText('mot a affiché', px + la taille du première mot +px, pY)
+           console.log(dessin2D);
+        })
+    </script>
+</body>
+</html>

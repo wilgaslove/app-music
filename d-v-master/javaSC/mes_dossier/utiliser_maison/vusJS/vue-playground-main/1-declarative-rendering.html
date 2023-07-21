@@ -1,0 +1,21 @@
+<script type="module">
+import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js' ;
+
+createApp({
+  // component options
+  data(){
+    return{
+      msg:"Rendez moi dynamique !",
+      styleMsg: "italic red",
+      p: "toto",
+      
+    }
+  }
+  // declare some reactive state here.
+}).mount('#app')
+</script>
+
+<div id="app">
+  <h1 v-bind:class="styleMsg red">{{msg}}</h1>
+  <p class="toto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti alias nostrum id sapiente velit voluptas minus odit consectetur distinctio ipsam, quas, sit itaque repudiandae voluptate maiores voluptates, eius tempora! Vel.</p>
+</div>

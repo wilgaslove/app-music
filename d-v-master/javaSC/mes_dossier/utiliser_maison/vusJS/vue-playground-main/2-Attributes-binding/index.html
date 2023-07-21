@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js'
+
+    createApp({
+      /*les options sont les les fn qui introdut directement dans createApp({
+        data(){
+          ...
+        },
+
+         methods:{
+          ...
+         },
+       }).mount('#app'). Il y a data(){}, et methods:{},*/
+       
+      data() {
+        return {
+          titleClass: 'red',
+          bgd:' bg-Dark',
+          bkgd: '#aaa'
+        }
+      },
+      methods:{//Pour déclerer une fn, on utilile une methods. une methods donne des propriétés.
+        test() {
+          alert("Hello !")
+        },
+
+        test2(){
+          
+        }
+
+      }
+    }).mount('#app')
+  </script>
+
+
+  <div id="app">
+    <h1 class="fw-400"
+     :class="[titleClass, bgd]"> changez ma couleur en rouge</h1>
+     <p  :style="{color: titleClass, backgroundColor: bkgd}">Lorem, ipsum dolor.</p>
+
+     <button v-on:click="test">Afficher message</button>
+  </div>
+
+</body>
+
+</html>

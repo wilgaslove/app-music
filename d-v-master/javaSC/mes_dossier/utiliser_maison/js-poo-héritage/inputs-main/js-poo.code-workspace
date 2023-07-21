@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../js"
+		},
+		{
+			"path": "../../js-note"
+		},
+		{
+			"path": "../../../exode"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501,
+		"liveServer.settings.multiRootWorkspaceName": "js-poo"
+	}
+}

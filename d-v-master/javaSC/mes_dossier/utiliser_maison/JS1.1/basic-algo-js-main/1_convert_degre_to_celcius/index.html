@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+
+    const array = [7, 5];
+    function doubleArray(array) {
+      for (let i = 0; i < array.length; i++) {
+        array[i] **= 2;
+      }
+      return array
+    }
+    console.log(doubleArray(array));
+
+
+
+ 
+    console.log("fontion lendat ou sans nom");
+    let squre = function (array) {
+      for (let i = 0; i < array.length; i++) {
+        array[i] **= 2;
+      }
+      return array
+    }
+    console.log(squre([4, 10]));
+
+
+
+    console.log("fonction flèchée");
+
+    let = (array) => {
+      for (let i = 0; i < array.length; i++) {
+        array[i] **= 2;
+      }
+      return array
+    }
+    console.log(squre([74, 5, 8.52]));
+
+
+
+
+
+    //fontion flèchée
+    //()=>{}
+
+    // cas générale:
+    // let const = (nom, prenom) =>{
+    //     votre code ici
+    // }
+
+    // cas d'une seule instruction (1 seule ligne de code)
+    //let saluer = nom => console.log("bjr" + nom);
+
+
+
+
+    //tableau
+    /*
+      let arr = [ ];
+      arr.forEach(function(element){})
+
+    forEach: permet d'executer une fonction pour chaque élélment du tableau.
+    syntax: 
+
+
+
+    let arr=[5,10,15,20]
+    function square(arr){
+      leet tmp =[];
+      for(let i=0; i<arr.length; i++){
+        tmp[i]=arr[i] * 2;
+      }
+      return tmp;
+    }
+    console.log(square(arr))
+    console.log(arr)
+
+
+
+
+    let tmpForEach = [];
+    arr.forEach(function(el, i){
+      tmpForEach[i] = el **2;
+    });
+    console.log(tmpForEach);
+
+
+    let tmp = [];
+    arr.forEach((element, index)=>{
+      tmp[index] = element **3;
+    });
+    console.log(arr);
+    console.log(arr.forEach);
+    */
+
+    const arr = [5, 10, 15, 20];
+    arr.forEach(function (element) {
+      console.log(element ** 2);
+    });
+
+
+
+
+    let square = function (array) {
+      for (let i = 0; i < array.length; i++) {
+        array[i] **= 2;
+      }
+      return array
+    }
+    console.log(square([5, 10, 15, 20]));
+
+
+
+    let table = [5, 15, 8, 96];
+    table[0] = 10
+    table[1] = 15
+    table[2] = 152
+    table[3] = 85
+    console.log(table);
+
+
+
+
+    //let questionnaire = prompt("entrez une phrase")
+    let ret = (questionnaire) =>{
+      return questionnaire + "?"
+    }
+   // console.log(ret(questionnaire));
+
+
+    let arrowFunction = (str) => {
+      let chaine = str + "?";
+      return chaine;
+    }
+
+    
+    let arrowFunction2 = str => {
+      return str + "?"
+    }
+
+
+    let arrowFunction3 = str => str + "?";
+
+
+
+
+    //push
+    //syntax
+    console.log('Array.push');
+
+   // let arr =[2, 5];
+   // arr.push(10);
+   // console.log(arr)//arr[2,5,10]
+
+
+
+
+   let tab = [];  // variable globale
+
+   let monPush = function (array) {
+      for (let i = 0; i < array.length; i++) {
+         tab.push(array[i] **=2);
+      }
+      return tab ;
+    }
+    console.log(monPush([2,5]));
+
+
+
+
+
+
+
+   
+  </script>
+</head>
+
+<body>
+<pre>
+  <code>
+    
+    <h1>console.log("unshift: permet d'ajouter un l'element au debut 'dun' tableau");</h1>
+
+    <p>console.log("pop: permet de retirer le dernier élément du tableau. cette l'element retourne l'element ayant été retiré");</p>
+   let arry=[1,2,3]
+    arry.pop(); retourne 3
+    arry=[1,2]
+
+
+
+    console.log("shift: retire le prémier l'élément du tableau. retourne l'élément supprimé");
+    let arry = [1,2,3,4,5]
+    arry.shift(), //retourne 1
+    arr = [2,3,4,5]
+    
+    console.log("slice: permet de retourner une portion d'un tableau");
+    let fruits = ["orange", "mangue", "banane", "papaye", "avocat"]
+    
+    arr.slice();retourne une copie exacte du tableau: ["orange", "mangue", "banane", "papaye", "avocat"]
+    arr.slice(début 2); retorune une partie du tableau à partir de l'indice "début": [""banane", "papaye", "avocat"]
+    arr.slice(début 1 , fin 3 ); retourne une partie du tableau compris entre "début (inclusif)" et fin(exclusif) : ["mangue", "banane"]
+    
+    
+    console.log("splice: permet de changer le contenu d'un tableau en supprimant ou en remplaçant les éléments existants ET/OU en ajoutant de nouveau element");
+    
+   syntax
+    arr.splice(début) index à partir duquel nous voulons changer le tableau
+    arr.splice(début, nombrfe-a-supprimer) nbr d'éléments que nous vouslons supprimé.
+    arr.splice(début, nombrfe-a-supprimer, item1)
+    arr.splice(début, nombrfe-a-supprimer, item1, item2....itemN)éléments que nous voulons ajouter
+
+    NB: Cette fonction retourne un tab contenant les éléments supprimés.
+    -si 1 seul élément
+    -
+    Ex:
+    let fruits = ["Mangue"];
+    fruits.splice(0,0, "Orange")//retourne []
+
+    ".concat": permet de fusionner deux ou plusieurs tableaux 
+    syntax
+    array.concat()
+
+    array.concat(valeue0);
+    array.concat(valeue0, valeue1);
+    array.concat(valeue0, valeue1,....,valeueN);
+    valueN(optionel): tableaux et ou des valeurs à concatener dans un nouveau tableau.
+
+    let arr1 = ['a', 'b', 'c'];
+    let arr1 = ['d', 'e', 'f'];
+    let arr4 = arr1.concat(arr2)
+  </code>
+  
+  
+  <h1>.includes</h1>
+  <p>permet de vérifier qu'un tableau contient une valeur spécifiée. retourne true/false</p>
+  <h2>syntax</h2>
+  
+  <pre>
+    <code>
+      array.includes("element-recherché")
+      
+      let arr = ["Mangue", "Orange"];
+      arr.includes("Banane");//retourne false
+      arr.includes("Mangue");//retourne true
+    </code>
+  </pre>
+  
+  //KKKKKKKKKKKKKKKKKKKK
+  <h1>.indexOf</h1>
+      <p>retourne l'index d'un élément du tableau</p>
+
+      <h2>syntax</h2>
+      <pre>
+        <code>
+          array.indexOf(element-recherché);
+          ex: let arr = ["Mangue", "Avocat", "Orange"]
+          arr.indexOf("Avocat");// retourne 1
+        </code>
+      </pre>
+
+      <h1>.join</h1>
+      <p>retourne une chaine de caractères en concarenant tous les éléments d'un tableau, séparés 
+         des virgules ou par le séparateur spécifié</p>
+         <h2>syntax</h2>
+
+         <pre>
+          <code>
+            array.join();
+            array.join(séparateur);
+
+            ex: let arr = ["Mangue", "Orange", "Banane"];
+            let str1 = arr.join();// str1= "Mangue, Orange, Banane"
+            let str2 = arr.join(" ");// str1= "Mangue Orange Banane"
+            let str2 = arr.join("-");// str1= "Mangue-Orange-Banane"
+            let str2 = arr.join("");// str1= "MangueOrangeBanane"
+          </code>
+         </pre>
+
+         <h1>.filter</h1>
+         <p>retourne une pprtion filtréfe d'un tableau, qui ne contient que les élément qui passent un test.
+          Ce test est implémenté par une fonction fournie à filter()
+         </p>
+         <h2>syntax</h2>
+         <pre>
+          <code>
+            array.filter(function(élélment, index){})
+            élélment: correspond à l'élélment qui esst actuellement traité dans le tableau 
+            index (optionel): correspond à l'index l'élément actuellement traité
+
+            ex: let arr = [0,1,2,3,4,5];
+            function getEvenNumber(el, i){
+              let isEven = el % 2 === 0; // vérifie si l'élélment est pair 
+              return isVen;
+            }
+
+            getEvenNumber(arr); retourne [0,2,4]
+          </code>
+         </pre>
+
+         <h1>.map</h1>
+         <p>retourne un nouveau tablfeau résultant de l'exécution d'une fonction (callback) donnée sur 
+          chaque élélment du tableau  appelant.
+         </p>
+         <h2>syntax</h2>
+         <pre>
+          <code>
+            array.map(function (element, index){})
+            ex: let arr = [3, 4, 7];
+            let tripledArr = arr.map(function (el){
+              return el * 3; 
+            });
+            console.log(tripledArr)// tripledArr = [4, 12, 21]
+          </code>
+         </pre>
+</pre>
+</body>
+
+</html>

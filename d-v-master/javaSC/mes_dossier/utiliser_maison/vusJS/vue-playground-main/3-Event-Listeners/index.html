@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+    
+  <div id="app">
+    <!-- make this button work -->
+    <button @click="counter">count is: {{ count }}</button>
+    <br>
+    <a href="" @click.prevent="log"> Mon lien</a>
+  </div>
+
+   
+  <script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js'
+    
+    createApp({
+      data() {
+        return {
+          count: 0,
+        }
+      },
+
+      methods:{
+        counter (){
+          return this.count++
+        },
+
+        log(/*event*/){
+          /*event.preventDefault();*/
+          console.log('Lien cliqué 🏍');
+        }
+      },
+
+    }).mount('#app')
+    </script>
+  
+</body>
+</html>

@@ -1,0 +1,16 @@
+<script type="module">
+import { createApp } from 'vue'
+
+createApp({
+  data() {
+    return {
+      count: 0
+    }
+  }
+}).mount('#app')
+</script>
+
+<div id="app">
+  <!-- make this button work -->
+  <button>count is: {{ count }}</button>
+</div>

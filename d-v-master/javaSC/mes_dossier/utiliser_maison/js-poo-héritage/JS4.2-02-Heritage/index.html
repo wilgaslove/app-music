@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=10">
+    <title>héritage</title>
+    <script type="module" src="script.js" defer></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        header{
+            background-color: gray;
+        }
+
+        body {
+            font-size: 2rem;
+            background-color: #ddd;
+        }
+
+        h1, 
+        h2 {
+            text-align: center;
+            color: brown;
+        }
+
+
+        main {
+            max-width: 900px;
+            margin-inline: auto;
+            text-align: justify;
+            border-color: #eee;
+        }
+
+        article{
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Héritage en JavaScript(JS)</h1>
+    </header>
+
+    <main class="container">
+
+        <article>
+            <h2>Héritage</h2>
+            <p>L'héritage en JS est un mécanisme qui permet à une classe d'hériter les propriétés et les méthodes d'une
+                autre classe, afin d réutiliser le code existant et de créer des hiérachie de classes.</p>
+            <p>L'héritage implément une relation de type <strong>"est-un"</strong> entre deux objets. Par exemple</p>
+        </article>
+
+
+        <article>
+            <h2>Getters et Setters JS</h2>
+            <p>En JS, les <strong>accesseurs</strong> et les <strong>mutateurs</strong> sont des méthodes spéciales qui
+                permettent d'accéder et de modifier les valeurs des propriétés d'un objt. Ils offrent un moyen de
+                contrôler l'accès aux données d'un objet et d'effectuer des opérations supplémentaires lors de la
+                lecture ou de l'écriture des propriétés. Les accesseurs sont généralement utilisés pour obtenir la
+                valeur d'une propriété, tandis que les mutateurs sont utilisés pour définir la valeur d'une propriété.
+            </p>
+
+            <p>Il existe deux types d'accesseurs en JS: <strong>`get`</strong> et <strong>`set`.</strong></p>
+        </article>
+
+    </main>
+
+    <footer class="footer"></footer>
+</body>
+
+</html>

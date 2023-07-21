@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>vuejs</title>
+</head>
+
+<body>
+    <header class="header"></header>
+
+    <main class="main">
+        <article>
+            <h2>VueJS</h2>
+            <p>Un frameWork est un ensemble, cohéran de concept de bibliotheque et d'outil qui fournissent
+                une structure pour faciliter la création et le de développement.</p>
+            <p>vuejs est un langage du côté client.</p>
+            <p>En JS, on parlera de Vuejs, </p>
+            <p>les avantages du vuejs. <br> 
+                -charger toutes les page web sans pour au tant rafraichie la page <br>
+                 -Un
+                moteur puissant qui utilise JS pour tout fait</p>
+            <p>utilise un modèle(template) semblable au HTML, mais fait usage "des états"
+                <br>
+                 -un état (en: state ) est une variable qu'on utilise dans notre application(ou  plus
+                précisement dans le template)
+            </p>
+
+
+
+            <p>Tout ce qui commence par <strong>V</strong> sont appelées directive</p>
+            <p><strong>v-bind:</strong> peut être remplacé par <strong>:</strong></p>
+            <p><strong>v-on:</strong> peut être remplacé par <strong>@</strong></p>
+        </article>
+        <article>
+            <pre>
+            <p>Dans le HTML</p>
+            <div id="app">
+                {{Bonjour}}
+                {{rang }}
+                {{note}}
+                <p>{{obj.nom}} a {{obj.taille}} m de taille.</p>
+            </div>
+        </pre>
+            <pre> <p>Dans le JS</p>
+  let app = new Vue({ <br>
+  el:'#app', <br>
+  data:{ <br>
+  Bonjour: "bonjour chère Parents d'élève", <br>
+  rang : "2ème", <br>
+  note :" Note de votre enfant [15, 18, 19, 20]", <br>
+
+  obj:{ <br>
+  nom: "Martin", <br>
+  taille: 3, <br>
+     } <br>
+    } <br>
+  }) 
+ </pre>
+        </article>
+
+
+        <article>
+            <h2>Destructuration des variables JS</h2>
+
+        </article>
+    </main>
+
+    <script>
+
+    </script>
+    <footer class="footer"></footer>
+
+</body>
+
+</html>

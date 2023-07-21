@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+      <!-- <p>Todo id: {{ todoId }}</p>
+      <button @click="todoId++">Fetch next todo</button> -->
+    <p v-if="!todoData">Loading...</p>
+    <!-- <pre v-else>{{ todoData }}</pre> -->
+
+    <table v-else>
+      <thead>
+        <tr>
+          <th></th>
+          <th>id</th>
+          <th>name</th>
+          <th>username</th>
+          <th>email</th>
+          <th>phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(user, ind) in users" :key="user.id">
+          <td></td>
+          <td>{{user.id}} </td>
+          <td>{{user.name}} </td>
+          <td>{{user.username}} </td>
+          <td>{{user.email}} </td>
+          <td>{{user.website}} </td>
+          <td>{{user.phone}} </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <script type="module">
+    import { createApp } from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.esm-browser.min.js'
+    
+    createApp({
+      data() {
+        return {
+          todoId: 1,
+          todoData: null,
+        }
+      },
+      methods: {
+        async fetchData() {
+          this.todoData = null
+          // const res = await fetch(
+          //   `./todos.json/${this.todoId}`
+          // )
+          const usersData = await fetch(
+            `./users.json/`
+          )
+          // this.todoData = (await res.json())[this.todoId - 1]
+          this.users = (await usersData.json())
+        }
+      },
+      mounted() {
+        this.fetchData()
+      }
+    }).mount('#app')
+    </script>
+</body>
+</html>
+

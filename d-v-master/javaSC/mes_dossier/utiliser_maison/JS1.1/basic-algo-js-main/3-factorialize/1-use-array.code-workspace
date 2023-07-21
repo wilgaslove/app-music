@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "../../../basic-data-structure.md-main/1-use-array"
+		},
+		{
+			"path": "../../../basic-data-structure.md-main/2-array-access"
+		},
+		{
+			"path": "../../../basic-data-structure.md-main/3-add-item"
+		},
+		{
+			"path": "../../../basic-data-structure.md-main/4-create-items"
+		},
+		{
+			"path": "../../../basic-data-structure.md-main/5-delete_items"
+		},
+		{
+			"path": "../../JS1.3-Discount"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

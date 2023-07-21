@@ -1,0 +1,43 @@
+        * {
+            box-sizing: border-box;
+        }
+
+        header{
+            text-align: center;
+            background-color: gray;
+        }
+         
+        header h1{
+            margin-block: 0;
+        }
+        header p{
+            margin-block: 0;
+            color: #ddd;
+        }
+
+        body {
+            font-size: 2rem;
+            background-color: #ddd;
+        }
+
+        h1, 
+        h2 {
+            text-align: center;
+            color: brown;
+        }
+
+
+        main {
+            max-width: 900px;
+            margin-inline: auto;
+            text-align: justify;
+            border-color: #eee;
+        }
+
+        article {
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+            background-color: bisque;
+        }
