@@ -1,3 +1,0 @@
-/**
- * Discount : Bonus 1
- */

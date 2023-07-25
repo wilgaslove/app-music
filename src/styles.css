@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+.works {
+    margin-left: 15rem;
+}
+
+.inpt {
+    margin-left: 20rem;
+    
+}
+
+label {
+    margin-inline: 1rem;
+}
+
+form button {
+    margin-left: 1rem;
+}
+
+.glyph-icon {
+    max-width: 3%;
+    margin-inline: 0.2rem;
+}
+
+.inptText {
+    font-size: 1.4rem;
+    margin-left: 30rem;
+}
+
+.card {
+    margin-block: 1rem;
+}
+
+.mgInl {
+    margin-inline: 0.2rem;
+    margin-bottom: 0.5rem;
+    border: 2px solid cyan;
+
+}
+
+
+small .like {
+    margin-inline: 3rem;
+}
