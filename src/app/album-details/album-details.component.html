@@ -1,17 +1,20 @@
-<p> album-detail works</p>
-    <div class="card">
-        <img class="card-img-top" src="./assets/images/default_image.png" alt="Group Music">
+<!-- <p> album-detail works</p> -->
+
+    <div  class="card" *ngIf="album" >
+        <img class="card-img-top" src=" " alt="Group Music">
         <div class="card-body">
-            <h5 class="card-title">{{album.title}}</h5>
-            <p class="card-text">{{album.description}}</p>
-            <a href="#" class="btn btn-primary">Play >> </a>
+            <h5 class="card-title"> title: {{album.title}}</h5>
+            <p class="card-text">Name: {{album.name}}</p>
+            <button (clik)="play(album)"  class="btn btn-primary">Play &gt;&gt;</button>
         </div>
-        <ul *ngFor="" class="list-group">
-            <li class="list-group-item active">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+        <ul *ngIf="album; else noLst" class="list-group">
+            <li *ngFor="let list of tab"class="list-group-item active">{{ list }}</li>
         </ul>
+        
+        <ng-template #noLst>
+            <ul>
+                <li class="list-group-item active">Pas de son pour cet album</li>
+            </ul>
+        </ng-template>
     </div>
 

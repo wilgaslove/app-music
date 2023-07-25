@@ -1,5 +1,5 @@
 <div class="container p-5 my-5 border">
-    <p class="works">albums works!</p>
+    <!-- <p class="works">albums works!</p> -->
 
     <div class="inpt p-2 border align-self-stretch">
         <form action="#" method="post">
@@ -16,9 +16,11 @@
     <div class="row content">
         <div class="col-sm-4 video">
 
-            <app-album-details [album]="selectedAlbum"></app-album-details>
+            <app-album-details [album]="selectedAlbum"  (onPlay)="playParent($event)"></app-album-details>
         </div>
 
+        
+        <!-- CONDICTION VERIFIEZ SI IL N'Y A DES TAGS PRESENT DANS UN ALBUM SI CE N'EST PAS LE CAS LA DIRECTIVE NE CRE -->
         <div *ngIf="albums" class="col-sm-8 music">
             <h1>{{ titlePage }}</h1>
 
@@ -40,22 +42,30 @@
             </div>
         </div> .card -->
             <div *ngFor="let album of albums" class="card">
+                    <div class="card-header">
+                        Pop <span *ngIf="status === album.id">[Play]</span>
+                    </div>
                 <div class="card-header">
                     {{album.ref}}
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{album.title}}</h5>
                     <p class="card-text">{{album.description}}</p>
+
+
                     <a *ngFor="let tag of album.tags" class="btn btn-outline-dark  mgInl btn badge bg-info " href="#"
                         role="button">{{tag}}</a>
                     <br>
 
                     <a class="btn btn-outline-dark mgInl" href="#" role="button">en</a>
+
                     <img class="glyph-icon" src="./assets/svg/si-glyph-heart.svg" />
                     <small class="like">{{album.like}}</small>
-
+                    <!-- 
+                        
+                     -->
                     <img class="glyph-icon" src="./assets/svg/si-glyph-timer.svg" />
-                    <small>{{album.duration}}</small>
+                    <small>{{album.duration}} min</small>
                     <br>
                     <button (click)="onSelect(album)">Appuyez</button>
                 </div>
@@ -64,3 +74,5 @@
         </div>
     </div>
 </div>
+
+

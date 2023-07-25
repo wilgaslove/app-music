@@ -15,6 +15,11 @@ export class Album {
 
 }
 
-export class List {
+    // export class List {
+    // }
 
+
+export interface List{
+    id:string,
+    list: Array<string>//string[]
 }
