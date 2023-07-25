@@ -18,9 +18,12 @@ export class AlbumsComponent {
   status: string | null = null;
 
   constructor(private albumService: AlbumService) {
-    //
+    console.log(`${this.albumService.count()} albums trouvés`);
+    
    }
   ngOnInit() {
+    this.albums = this.albumService.getAlbums();
+    console.log();
     
   };
 

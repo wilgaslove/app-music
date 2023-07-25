@@ -13,8 +13,10 @@ export class AlbumService {
   constructor() { }
 
   getAlbums(): Album[] {
-    return this._albums;
+    return this._albums.sort((a: Album, b: Album) => b.duration - a.duration)
   }
+
+
 
   getAlbum(id: string): Album | undefined {
     return this._albums.find(album => album.id === id);
@@ -22,9 +24,16 @@ export class AlbumService {
 
 
   getAlbumList(id: string): List | undefined {
-    return this._albumList.find(list => list.id === id);
+    return this._albumList.find(list => list.id === id) //?.list;
   }
 
+  /**
+   * Fonction qui retourne le nombre d'albums
+   * @returns le nombre d'albums
+   */
+  count(){
+    return this._albums.length;
+  }
 
 
 }

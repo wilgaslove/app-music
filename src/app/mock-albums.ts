@@ -9,7 +9,7 @@ export const ALBUMS: Album[] = [
         "title": "pariatur nulla",
         "description": "Voluptate mollit consectetur pariatur labore. Quis amet quis minim nulla voluptate amet nisi. Ut sint veniam magna aute velit minim laborum eiusmod mollit dolor laborum. Minim Lorem Lorem pariatur adipisicing laborum tempor consequat est officia proident. Qui consequat duis ipsum minim Lorem cillum in excepteur.\r\n",
         "duration": 600,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/underwater.jpg",
         "tags": [
           "consectetur",
           "do",
@@ -31,7 +31,7 @@ export const ALBUMS: Album[] = [
         "description": "Magna laborum quis qui deserunt id. Aute sint consequat aliquip minim duis tempor reprehenderit laborum pariatur ut anim culpa. Laboris sit ea cillum ex nostrud deserunt. Nulla deserunt exercitation non eu ipsum. Cillum ut irure et ea esse ea anim nostrud proident. Non incididunt ut velit pariatur. Occaecat qui fugiat cupidatat est pariatur irure sunt excepteur anim.\r\n",
         "like": "Much",
         "duration": 480,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "status": "off"
     },
     {
@@ -61,7 +61,7 @@ export const ALBUMS: Album[] = [
         "title": "consequat excepteur",
         "description": "Cillum proident commodo do non esse cillum incididunt officia qui occaecat. Excepteur id voluptate esse tempor aliqua voluptate in labore anim incididunt ea nostrud nisi. Proident adipisicing adipisicing enim adipisicing nisi elit irure.\r\n",
         "duration": 840,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/underwater.jpg",
         "like": "Rather",
         "tags": [
             "laborum",
@@ -81,7 +81,7 @@ export const ALBUMS: Album[] = [
         "title": "duis veniam",
         "description": "Labore tempor laborum voluptate exercitation velit tempor magna ut pariatur sint ex. Est id magna mollit ipsum mollit minim officia. Enim aliquip eiusmod sunt incididunt aliquip occaecat eu. Eiusmod fugiat aliquip officia tempor esse ut et nulla. Commodo consectetur aliquip mollit laborum velit dolor quis nisi do. Consectetur voluptate quis nostrud deserunt incididunt ea in ad adipisicing ea laboris ullamco. Occaecat consectetur mollit deserunt excepteur enim consectetur dolor nostrud aute.\r\n",
         "duration": 840,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "like": "Rather",
         "status": "off"
     },
@@ -152,7 +152,7 @@ export const ALBUMS: Album[] = [
         "title": "Lorem Potter III",
         "description": "Nostrud veniam dolor velit id occaecat cupidatat aliquip exercitation id aliqua nostrud. Ad mollit Lorem consectetur minim consequat est eiusmod deserunt pariatur est ullamco. Veniam anim veniam Lorem excepteur irure. Esse adipisicing nulla in incididunt. Consectetur fugiat exercitation aliquip excepteur ipsum ullamco ullamco magna commodo.\r\n",
         "duration": 240,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "like": "Much",
         "tags": [
             "consectetur",
