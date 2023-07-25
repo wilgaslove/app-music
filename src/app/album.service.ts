@@ -35,5 +35,8 @@ export class AlbumService {
     return this._albums.length;
   }
 
+ // paginate(start: number, end: number):Album[]{}
+
+
 
 }
