@@ -49,16 +49,15 @@ export class AlbumService {
     return this.getAlbums().slice(start, end);
   }
 
-  //search(word: string): Album[] {
-
-  //   return this._albums.filter(album => {
-  //    return album.title.toLowerCase()
-  //    .includes(word.trim().toLowerCase());
-  //   }); 
-  // }
-
-  search(word: string): Album[]{
-     let re = new RegExp(word.trim(), "g");
-     return this._albums.filter(album => album.title.match(re))
+  search(word: string): Album[] {
+     return this._albums.filter(album => {
+      return album.title.toLowerCase()
+      .includes(word.trim().toLowerCase());
+     }); 
    }
+
+  // search(word: string): Album[]{
+  //    let re = new RegExp(word.trim(), "g");
+  //    return this._albums.filter(album => album.title.match(re))
+  //  }
 }

@@ -26,7 +26,7 @@ export class AlbumsComponent {
       .order(function (a: Album, b: Album) {
         return a.duration - b.duration;
       })//ordonne les albums
-      .limit(0, 2)// renvoyer une sous -partie
+      .limit(0, 10)// renvoyer une sous -partie
       .getAlbums()// recupère les albums
 
   };
@@ -39,6 +39,15 @@ export class AlbumsComponent {
 
   playParent($event: Album) {
     this.status = $event.id;
+    
+  }
+
+  search($event: Album[]){
+    if ($event) {
+      this.albums = $event
+    }
+
+    console.log(`parent sera mis à jour et affichera seulement les albums ${$event}`);
     
   }
 }
