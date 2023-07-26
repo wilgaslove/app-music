@@ -23,3 +23,7 @@ export interface List{
     id:string,
     list: Array<string>//string[]
 }
+
+export interface SortAlbumCallback  {
+    (a: Album, b: Album): number
+}

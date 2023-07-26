@@ -19,22 +19,27 @@ export class AlbumsComponent {
 
   constructor(private albumService: AlbumService) {
     console.log(`${this.albumService.count()} albums trouvés`);
-    
-   }
-  ngOnInit() {
-    this.albums = this.albumService.getAlbums();
-    console.log();
-    
+
+  }
+  ngOnInit(): void {
+    this.albums = this.albumService
+      .order(function (a: Album, b: Album) {
+        return a.duration - b.duration;
+      })//ordonne les albums
+      .limit(0, 2)// renvoyer une sous -partie
+      .getAlbums()// recupère les albums
+
   };
 
   onSelect(album: Album) {
     this.selectedAlbum = album;
-    console.log(this.selectedAlbum);
+    // console.log();
 
   }
 
   playParent($event: Album) {
     this.status = $event.id;
+    
   }
 }
 

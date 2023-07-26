@@ -1,7 +1,9 @@
-<div class="container p-5 my-5 border">
+<app-search></app-search>
+
+<div >
     <!-- <p class="works">albums works!</p> -->
 
-    <div class="inpt p-2 border align-self-stretch">
+    <!-- <div class="inpt p-2 border align-self-stretch">
         <form action="#" method="post">
             <label for="">app-music</label>
             <label for=""> Home</label>
@@ -9,9 +11,7 @@
             <input type="text" class=" inptText" placeholder="Search">
             <button type="button" class="btn btn-outline-success">Search</button>
         </form>
-    </div>
-
-
+    </div> -->
 
     <div class="row content">
         <div class="col-sm-4 video">
@@ -42,10 +42,11 @@
             </div>
         </div> .card -->
             <div *ngFor="let album of albums" class="card">
-                    <div class="card-header">
-                        Pop <span *ngIf="status === album.id">[Play]</span>
-                    </div>
+                   <!-- <div class="card-header">
+                      {{i + 1}}  Pop <span *ngIf="status === album.id">[Play]</span>
+                    </div> -->
                 <div class="card-header">
+                    Pop <span *ngIf="status === album.id">[Play]</span>
                     {{album.ref}}
                 </div>
                 <div class="card-body">

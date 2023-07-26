@@ -32,7 +32,7 @@ export class AlbumDetailsComponent  implements OnInit, OnChanges{
 
   play(album: Album){
   //emettre un album vers le parent
-  this.onPlay.emit(album);    
+  this.onPlay.emit(album); 
   }
 
   

@@ -1,11 +1,12 @@
 <!-- <p> album-detail works</p> -->
 
-    <div  class="card"  >
+    <div  class="card" *ngIf="album" >
         <img class="card-img-top" src="{{album.url}}" alt="Group Music">
         <div class="card-body">
             <h5 class="card-title"> title: {{album.title}}</h5>
             <p class="card-text">Name: {{album.name}}</p>
-            <button (clik)="play(album)"  class="btn btn-primary">Play &gt;&gt;</button>
+            
+            <button (click)="play(album)"  class="btn btn-primary">Play &gt;&gt;</button>
         </div>
         <ul *ngIf="album; else noLst" class="list-group">
             <li *ngFor="let list of tab"class="list-group-item ">{{ list }}</li>
