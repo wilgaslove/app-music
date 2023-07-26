@@ -26,7 +26,6 @@ export class AlbumsComponent {
       .order(function (a: Album, b: Album) {
         return a.duration - b.duration;
       })//ordonne les albums
-      .limit(0, 10)// renvoyer une sous -partie
       .getAlbums()// recupère les albums
 
   };

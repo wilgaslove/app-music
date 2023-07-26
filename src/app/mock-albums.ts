@@ -41,7 +41,7 @@ export const ALBUMS: Album[] = [
         "title": "laboris nisi",
         "description": "Exercitation sunt qui sint eiusmod velit est dolor duis commodo nulla cillum cupidatat dolor voluptate. Amet aute duis deserunt ad quis eiusmod est. In veniam veniam mollit velit qui amet quis. Et do sint ipsum nisi velit culpa laborum.\r\n",
         "duration": 360,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "tags": [
             "elit",
             "eiusmod",
@@ -92,7 +92,7 @@ export const ALBUMS: Album[] = [
         "title": "Lorem Lorem",
         "description": "Nostrud veniam dolor velit id occaecat cupidatat aliquip exercitation id aliqua nostrud. Ad mollit Lorem consectetur minim consequat est eiusmod deserunt pariatur est ullamco. Veniam anim veniam Lorem excepteur irure. Esse adipisicing nulla in incididunt. Consectetur fugiat exercitation aliquip excepteur ipsum ullamco ullamco magna commodo.\r\n",
         "duration": 360,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "like": "Much",
         "tags": [
             "consectetur",
@@ -112,7 +112,7 @@ export const ALBUMS: Album[] = [
         "title": "Lorem Potter",
         "description": "Nostrud veniam dolor velit id occaecat cupidatat aliquip exercitation id aliqua nostrud. Ad mollit Lorem consectetur minim consequat est eiusmod deserunt pariatur est ullamco. Veniam anim veniam Lorem excepteur irure. Esse adipisicing nulla in incididunt. Consectetur fugiat exercitation aliquip excepteur ipsum ullamco ullamco magna commodo.\r\n",
         "duration": 240,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "like": "Much",
         "tags": [
             "consectetur",
@@ -132,7 +132,7 @@ export const ALBUMS: Album[] = [
         "title": "Lorem Potter II",
         "description": "Nostrud veniam dolor velit id occaecat cupidatat aliquip exercitation id aliqua nostrud. Ad mollit Lorem consectetur minim consequat est eiusmod deserunt pariatur est ullamco. Veniam anim veniam Lorem excepteur irure. Esse adipisicing nulla in incididunt. Consectetur fugiat exercitation aliquip excepteur ipsum ullamco ullamco magna commodo.\r\n",
         "duration": 240,
-        "url": "http://placehold.it/32x32",
+        "url": "../assets/images/img_lights_wide.jpg",
         "like": "Much",
         "tags": [
             "consectetur",

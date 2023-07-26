@@ -10,13 +10,20 @@ import { AlbumService } from '../album.service';
 })
 
 export class SearchComponent {
+  word: string ="";
   @Output() searchAlbums: EventEmitter<Album[]> = new EventEmitter()
 constructor(
   private albumService : AlbumService,
 ){}
 
- onSubmit(form: NgForm ){
+ onSubmit(form:  NgForm ){
   const results: Album[] = this.albumService.search(form.value.word)
   this.searchAlbums.emit(results);
+ }
+
+ onChangeEmite($event: string){
+  const results: Album [] = this.albumService.search($event);
+  this.searchAlbums.emit(results)
+  
  }
 }

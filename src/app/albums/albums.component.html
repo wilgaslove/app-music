@@ -1,13 +1,25 @@
 <app-search (searchAlbums)="search($event)"></app-search>
 
 <div >
-   
+    <!-- <p class="works">albums works!</p> -->
+
+    <!-- <div class="inpt p-2 border align-self-stretch">
+        <form action="#" method="post">
+            <label for="">app-music</label>
+            <label for=""> Home</label>
+            <label for=""> Se connecter</label>
+            <input type="text" class=" inptText" placeholder="Search">
+            <button type="button" class="btn btn-outline-success">Search</button>
+        </form>
+    </div> -->
+
     <div class="row content">
         <div class="col-sm-4 video">
 
             <app-album-details [album]="selectedAlbum"  (onPlay)="playParent($event)"></app-album-details>
         </div>
 
+        
         <!-- CONDICTION VERIFIEZ SI IL N'Y A DES TAGS PRESENT DANS UN ALBUM SI CE N'EST PAS LE CAS LA DIRECTIVE NE CRE -->
         <div *ngIf="albums" class="col-sm-8 music">
             <h1>{{ titlePage }}</h1>
@@ -29,13 +41,14 @@
                 <small>{{album.duration}}</small>
             </div>
         </div> .card -->
-
             <div *ngFor="let album of albums" class="card">
                    <!-- <div class="card-header">
-                      {{i + 1}}  Pop <span *ngIf="status === album.id">[Play]</span>
+                     Pop <span *ngIf="status === album.id">[Play]</span>
                     </div> -->
+
+
                 <div class="card-header">
-                    Pop <span *ngIf="status === album.id">[Play]</span>
+                     Pop <span *ngIf="status === album.id" >[Play]</span>
                     {{album.ref}}
                 </div>
                 <div class="card-body">
