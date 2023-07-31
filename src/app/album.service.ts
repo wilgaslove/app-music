@@ -1,4 +1,7 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { environment } from 'src/environment/environment';
+//import { Subject } from 'rxjs';
 import { List, Album, SortAlbumCallback } from './album';
 import { ALBUMS, ALBUM_LISTS } from './mock-albums';
 
@@ -9,18 +12,21 @@ export class AlbumService {
   private _albumList: List[] = ALBUM_LISTS
   private _albums: Album[] = ALBUMS
 
+  //observable qui notifie la page actulle
+  sendCurrentNumberPage = new Subject<number>();
 
   constructor() { }
 
   getAlbums(): Album[] {
-    return this._albums;
+  return this._albums.sort((a: Album, b:Album) => b.duration - a.duration);
+
   }
 
 
 
-  /*getAlbum(id: string): Album | undefined {
+  getAlbum(id: string): Album | undefined {
     return this._albums.find(album => album.id === id);
-  }*/
+  }
 
 
   getAlbumList(id: string): List | undefined {
@@ -50,14 +56,32 @@ export class AlbumService {
   }
 
   search(word: string): Album[] {
-     return this._albums.filter(album => {
+    return this._albums.filter(album => {
       return album.title.toLowerCase()
-      .includes(word.trim().toLowerCase());
-     }); 
-   }
+        .includes(word.trim().toLowerCase());
+    });
+  }
 
   // search(word: string): Album[]{
   //    let re = new RegExp(word.trim(), "g");
   //    return this._albums.filter(album => album.title.match(re))
   //  }
+
+  /**
+   * Méthode qui renvoi le nombre d'album qu'on a par page
+   */
+  paginateNumberPage(): number {
+    return environment.numberPage;
+  }
+
+  /**
+   * 
+   * @param numberPage Méthode qui signale à tous les compossants la page actulle
+   * @returns 
+   */
+  currentPage(numberPage: number) {
+    return this.sendCurrentNumberPage.next(numberPage);
+  }
+
+
 }

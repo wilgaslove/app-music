@@ -1,8 +1,24 @@
+<!-- class="container-fuild principal" -->
 
-<div class="container-fuild principal">
+
+<div class=" principal   container p-5 my-5 bg-info text-white div-princ"   style="background-image: url(../assets/images/.jpg);">
   <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- class="nav-item active" -->
+    <ul class="navbar-nav mr-auto">
+      <li><a class="nav-link" routerLink="">app-music</a></li>
+      <li><a class="nav-link" routerLink="">Home</a></li>
+      <li><a class="nav-link" routerLink="/login" routerLinkActive="active">Se connecter</a></li>
+  </ul>
   </nav>
-  <app-albums></app-albums>
+  
+  <!-- la partie où sera rendu tous les enfants de ce composant -->
+  <router-outlet></router-outlet>
+    <!-- <app-first-comp></app-first-comp>
+    <app-second-comp></app-second-comp> -->
 </div>
+
+
+
+
 
 

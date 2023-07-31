@@ -1,0 +1,23 @@
+<div [@fadeInAnimation] class="card" *ngIf="album">
+
+    <div class="card-header bg-danger">
+        <p>Featured</p>
+    </div>
+
+    <div class="card-body"  *ngIf="album" >
+
+        <h5 class="card-title">{{album.title}}</h5>
+        <p>Name: {{album.name}}</p>
+        <p>{{album.description}}</p>
+        <p> Duration: {{album.duration || 0}} min</p>
+        <small class="like">{{album.like}}</small>
+
+        <br>
+        <a *ngFor="let tag of album.tags" class="btn btn-outline-dark  mgInl btn badge bg-info " href="#"
+            role="button">{{tag}}</a>
+
+        <br>
+        <img style="max-width: 20rem; margin-inline: auto;" class="card-img-top" src="{{album.url}}" alt="Group Music">
+
+    </div>
+</div>
