@@ -5,7 +5,7 @@ import { AlbumService } from '../album.service';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
+ templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
 
@@ -17,13 +17,24 @@ constructor(
 ){}
 
  onSubmit(form:  NgForm ){
-  const results: Album[] = this.albumService.search(form.value.word)
-  this.searchAlbums.emit(results);
+  const results = this
+  .albumService.search(form.value.word)
+  .subscribe({
+    next: (alb: Album[]) => {
+      if (alb.length > 0) {
+        this.searchAlbums.emit(alb);
+      }
+    }
+  });
  }
 
  onChangeEmite($event: string){
-  const results: Album [] = this.albumService.search($event);
-  this.searchAlbums.emit(results)
+  const results = this.albumService.search($event)
+  .subscribe(
+    (alb: Album[]) =>{
+      this.searchAlbums.emit(alb)
+    }
+  )
   
  }
 }

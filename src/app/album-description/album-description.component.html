@@ -1,7 +1,7 @@
 <div [@fadeInAnimation] class="card" *ngIf="album">
 
     <div class="card-header bg-danger">
-        <p>Featured</p>
+        <p class="text-white">Featured</p>
     </div>
 
     <div class="card-body"  *ngIf="album" >
@@ -10,7 +10,7 @@
         <p>Name: {{album.name}}</p>
         <p>{{album.description}}</p>
         <p> Duration: {{album.duration || 0}} min</p>
-        <small class="like">{{album.like}}</small>
+        <small class="like">{{album.like || 'Pas de likes'}}</small>
 
         <br>
         <a *ngFor="let tag of album.tags" class="btn btn-outline-dark  mgInl btn badge bg-info " href="#"

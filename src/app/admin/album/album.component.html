@@ -1,0 +1,32 @@
+<p>
+    <b class="btn btn-dark"  routerLink="/admin/add">Add Album</b>
+</p>
+
+ <!-- <app-paginat (setPaginate)="onSetPaginate($event)"></app-paginat> -->
+
+
+<table  *ngIf="albums" class="table table-dark" >
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Update</th>
+            <th scope="col">Name</th>
+            <th scope="col">Title</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody class="table-group-divider">
+        <tr *ngFor="let album of albums">
+            <th scope="row"> {{ album.id }} </th>
+            <td><b type="button" class="btn btn-secondaire"> update </b></td>
+            <td> {{album.name}} </td>
+            <td> {{album.title}} </td>
+            <td> {{album.duration}} </td>
+            <td><b class="btn btn-danger">Delete</b></td>
+        </tr>
+
+
+    </tbody>
+</table>
+<!-- <app-paginat (setPaginate)="onSetPaginate($event)"></app-paginat>  -->

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, NgForm } from '@angular/forms';
 import { fadeInAnimation } from '../animation.module';
 
 @Component({
@@ -9,6 +9,10 @@ import { fadeInAnimation } from '../animation.module';
   animations: [fadeInAnimation]
 
 })
+// export class LoginComponent {
+//   emailPassewold = new FormControl('');
+// }
 export class LoginComponent {
-  emailPassewold = new FormControl('');
+  onSubmit(form: NgForm) {
+  }
 }

@@ -1,20 +1,27 @@
 <!-- class="container-fuild principal" -->
 
 
-<div class=" principal   container p-5 my-5 bg-info text-white div-princ"   style="background-image: url(../assets/images/.jpg);">
-  <nav class="navbar navbar-expand-lg navbar-light">
-            <!-- class="nav-item active" -->
-    <ul class="navbar-nav mr-auto">
-      <li><a class="nav-link" routerLink="">app-music</a></li>
-      <li><a class="nav-link" routerLink="">Home</a></li>
-      <li><a class="nav-link" routerLink="/login" routerLinkActive="active">Se connecter</a></li>
-  </ul>
-  </nav>
+<div class="bckg-img">
   
-  <!-- la partie où sera rendu tous les enfants de ce composant -->
-  <router-outlet></router-outlet>
-    <!-- <app-first-comp></app-first-comp>
-    <app-second-comp></app-second-comp> -->
+  <div class=" principal   container p-5 my-5  text-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
+              <!-- class="nav-item active" -->
+      <ul class="navbar-nav mr-auto">
+        <li><a class="nav-link text-white" routerLink="">app-music</a></li>
+        <li><a class="nav-link text-white" routerLink="">Home</a></li>
+        <li><a class="nav-link text-white" routerLink="/login" routerLinkActive="active">Se connecter</a></li>
+        <li><a class="nav-link text-white" routerLink="/admin" routerLinkActive="active">Admin</a></li>
+      </ul>
+      <p *ngIf="count">{{count}} </p>
+    </nav>
+
+    <app-audio-player></app-audio-player>
+  
+    <!-- la partie où sera rendu tous les enfants de ce composant -->
+    <router-outlet></router-outlet>
+      <!-- <app-first-comp></app-first-comp>
+      <app-second-comp></app-second-comp> -->
+  </div>
 </div>
 
 

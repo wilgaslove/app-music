@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstCompComponent } from './first-comp.component';
+import { AddAlbumComponent } from './add-album.component';
 
-describe('FirstCompComponent', () => {
-  let component: FirstCompComponent;
-  let fixture: ComponentFixture<FirstCompComponent>;
+describe('AddAlbumComponent', () => {
+  let component: AddAlbumComponent;
+  let fixture: ComponentFixture<AddAlbumComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FirstCompComponent]
+      declarations: [AddAlbumComponent]
     });
-    fixture = TestBed.createComponent(FirstCompComponent);
+    fixture = TestBed.createComponent(AddAlbumComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

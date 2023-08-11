@@ -1,37 +1,17 @@
-<!-- <p>login works!</p> -->
-<!-- <label for="name">Name: </label>
-<input id="name" type="text" 
-[formControl]="emailPassewold" required> <br> -->
-
-
-<!-- <label for="Email">Email Address </label>
-<input id="Email" type="email" 
-[formControl]="emailPassewold" required> <br>
-
-
-<label for="Password">Password </label>
-<input id="password" type="password" 
-[formControl]="emailPassewold" required> <br>
-
-<input type="text"> <label for="cars">Chek me out</label>
-
-<br>
-
-<input type="submit"  value="Submit"> -->
-
-<form [@fadeInAnimation] style="max-width: 400px; margin-inline: auto;">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+<form [@fadeInAnimation]
+  style="max-width: 400px; margin-inline: auto; border: 0.5rem solid black; border-radius: 1rem; padding-inline: 0.5rem;padding-bottom: 0.5rem;">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

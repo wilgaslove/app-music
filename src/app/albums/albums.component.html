@@ -1,36 +1,35 @@
 <div [@fadeInAnimation] class="container">
-   
+
     <app-search (searchAlbums)="search($event)"></app-search>
     <div class="row content">
         <div class="col-sm-4 video">
-
+            <!-- Albums Details -->
             <app-album-details [album]="selectedAlbum" (onPlay)="playParent($event)"></app-album-details>
         </div>
 
 
         <!-- CONDICTION VERIFIEZ SI IL N'Y A DES TAGS PRESENT DANS UN ALBUM SI CE N'EST PAS LE CAS LA DIRECTIVE NE CRE -->
-        
+
         <div *ngIf="albums" class="col-sm-8 music">
-            
-            <h1 >{{ titlePage }}</h1>
-            <app-paginat  (setPaginate)="onSetPaginate($event)" ></app-paginat> <!-- importation de la page paginat--> 
 
-              
+            <h1>{{ titlePage }}</h1>
+            <app-paginat (setPaginate)="onSetPaginate($event)"></app-paginat> <!-- importation de la page paginat-->
 
-            
+
+
+
             <div *ngFor="let album of albums" class="card">
 
                 <div class="card-header bg-danger">
                     {{album.ref}}
-                    <span *ngIf="status === album.id" class="spinner-border text-info"></span>
+                    <span *ngIf="status === album.id" class="spinner-border "></span>
 
-                </div >
+                </div>
                 <div class="card-body">
-                    <a class="card-title text-info " routerLink="/album/{{album.id}}">{{album.title}}</a>
+                    <a class="card-title  " routerLink="/album/{{album.id}}">{{album.title}}</a>
                     <p class="card-text">{{album.description}}</p>
 
-                    <a *ngFor="let tag of album.tags" class="btn btn-outline-dark  mgInl btn badge bg-info " href="#"
-                        role="button">{{tag}}</a>
+                    <a *ngFor="let tag of album.tags" class="btn btn-outline-dark" href="#" role="button">{{tag}}</a>
                     <br>
                     <a class="btn btn-outline-dark mgInl" href="#" role="button">en</a>
 
@@ -43,6 +42,14 @@
                     <button class="btn btn-outline-dark mgInl" (click)="onSelect(album)"
                         style="margin-right: 1rem;">Details</button>
                     <a class="btn btn-outline-dark mgInl" routerLink="/albums" role="button">Hide Album</a>
+                    <!-- TK -->
+                    <ng-template #notfound>
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p class="card-text fs-4">Aucun album trouvé !😭😿</p>
+                            </div>
+                        </div>
+                    </ng-template>
                 </div>
             </div>
 

@@ -1,7 +1,8 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
-import { Album } from '../album';
+import { Album, List } from '../album';
+import { AlbumService } from '../album.service';
 import { fadeInAnimation } from '../animation.module';
-import { ALBUM_LISTS } from "../mock-albums";
+//import { ALBUM_LISTS } from "../mock-albums1";
 
 @Component({
   selector: 'app-album-details',
@@ -13,31 +14,49 @@ import { ALBUM_LISTS } from "../mock-albums";
 
 //à chaque "hook" son interface
 export class AlbumDetailsComponent implements OnInit, OnChanges {
-  @Input() album!: Album;//Une propriété liée qui sera passée par le parent
+  @Input() album!: Album; //Une propriété liée qui sera passée par le parent
   @Output() onPlay: EventEmitter<Album> = new EventEmitter();
+  @Output() onHide: EventEmitter<Album> = new EventEmitter();
+
+
   selectedAlbum!: Album;
   tab !: string[] | undefined;
+  albumLists: List[] = [];
+  songs: string[] | undefined = [];
 
-  constructor() { }
+  constructor(private albumService: AlbumService) { }
   ngOnInit(): void {
-    console.log(this.album);
+    //console.log(this.album);
   };
+
   ngOnChanges(): void {
-    //récupérer la liste des chansons
-    if (this.album !== undefined) {
-      ALBUM_LISTS.forEach(element => {
-        if (this.album.id === element.id) {
-          this.tab = element.list;
-        }
-      });
+    if (this.album) {
+      this.albumService.getAlbumList(this.album.id).subscribe(
+        (albumList) => { this.songs = albumList.list }
+      )
     }
   };
 
-  play(album: Album) {
+
+  play(songs: Album) {
     //emettre un album vers le parent
-    this.onPlay.emit(album);
+    this.onPlay.emit(songs);
+    this.albumService.switchOn(songs)
   }
+
+  // TK
+  shuffleAlbum(songs: string[]) {
+   // this.songs = this.albumService.shuffle(songs);
+  }
+
+  hide(album: Album) {
+    this.onHide.emit(album);
+  }
+
+
 }
+
+
 
 
 

@@ -3,7 +3,7 @@ import { Album } from './album';
 export const ALBUMS: Album[] = [
   
     {
-        "id": "1",
+        "id": "0",
         "ref": "Hard Rock",
         "name": "Kirby Ortega",
         "title": "pariatur nulla",
@@ -24,7 +24,7 @@ export const ALBUMS: Album[] = [
         "status": "off"
     },
     {
-        "id": "2",
+        "id": "0",
         "ref": "Rock",
         "name": "Traci Huber",
         "title": "fugiat non",
